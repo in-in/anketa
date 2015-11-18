@@ -9,6 +9,8 @@ gulp.task('server', () => (
 		open: !!gutil.env.open,
 		reloadOnRestart: true,
 		port: gutil.env.port || 3000,
+		ui: false,
+		notify: false,
 		server: {
 			baseDir: [
 				'app/resources',
