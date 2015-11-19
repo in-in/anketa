@@ -1,13 +1,11 @@
 {
   "name": "newproject",
   "version": "1.0.0",
-  "description": "**Шаблон проекта для быстрого старта.**",
+  "description": "Anketa",
   "main": "gulpfile.babel.js",
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC"
 }
