@@ -7,12 +7,12 @@ mixin header()
 	+b.header
 		+container()
 			+e.wrapper
-				+logo()
-					| Секретный архив учреждения
-				+secret()
-				.header__title
+				+e.logo
+					+logo()
+				+e.mark
+					+secret()
+				+e.title
 					+title()
-						| CSSSR Project Template
 		
 
 				//+description()
