@@ -12,9 +12,10 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	body
-		+main()
-			+header()
-			block content
-			+footer()
+		+container
+			+main()
+				+header()
+				block content
+				+footer()
 
 		+scripts()
