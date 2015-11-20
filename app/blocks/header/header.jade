@@ -1,4 +1,5 @@
 include ../logo/logo
+include ../secret/secret
 include ../dark/dark
 include ../title/title
 include ../description/description
@@ -6,11 +7,13 @@ include ../description/description
 mixin header()
 	.header
 		+logo()
-
+			| Секретный архив учреждения
+		+secret()
 		.header__title
 			+dark()
 				+title()
 					| CSSSR Project Template
+	
 
 		+description()
 			| Шаблон проекта для быстрого старта.
