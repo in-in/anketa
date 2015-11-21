@@ -2,6 +2,7 @@ include ../content/content
 include ../container/container
 include ../subtitle/subtitle
 include ../heading/heading
+include ../personal-data/personal-data
 include ../list/list
 include ../col/col
 include ../arrow/arrow
@@ -10,6 +11,8 @@ include ../tree/tree
 mixin index()
 	.index
 		+content()
+			+personal-data(getData('personalData'))
+			
 			.index__group
 				+subtitle()
 					| ЧТО ВКЛЮЧЕНО
@@ -24,7 +27,6 @@ mixin index()
 				+subtitle()
 					| СТРУКТУРА ФАЙЛОВ
 
-			+container()
 				+col()
 					+heading()
 						| Исходники
