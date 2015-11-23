@@ -2,7 +2,8 @@ include ../content/content
 include ../container/container
 include ../subtitle/subtitle
 include ../heading/heading
-include ../personal-data/personal-data
+include ../monospace/monospace
+include ../personal/personal
 include ../list/list
 include ../col/col
 include ../arrow/arrow
@@ -11,7 +12,7 @@ include ../tree/tree
 mixin index()
 	.index
 		+content()
-			+personal-data(getData('personalData'))
+			+personal(getData('personalData'))
 			
 			.index__group
 				+subtitle()
