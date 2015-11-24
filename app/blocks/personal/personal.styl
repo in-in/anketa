@@ -4,12 +4,13 @@
 .personal__row
 	display flex
 	align-items flex-end
-	// background-color royalblue
 	margin-bottom 23px
 
 .personal__title
 	margin-right 1rem
 	// background-color palegreen
+	white-space nowrap
+		//margin-bottom 1.3rem
 
 .personal__data
 	flex-grow 1
@@ -17,3 +18,13 @@
 	padding-bottom 0.563rem
 	// background-color crimson
 	border-bottom 2px solid monospace-color
+	+below('xl')
+		background-color rgba(red, 20%)
+	+below('l')
+		background-color rgba(blue, 20%)
+	+below('m')
+		background-color rgba(green, 20%)
+	+below('s')
+		background-color rgba(orange, 20%)
+	+below('xs')
+		background-color rgba(purple, 20%)

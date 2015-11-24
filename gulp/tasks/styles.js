@@ -29,7 +29,7 @@ gulp.task('styles', () => (
 				inline: true
 			} : false
 		}))
-		.pipe(gulpif(!gutil.env.debug, cmq()))
+		//.pipe(gulpif(!gutil.env.debug, cmq()))
 		.pipe(gulpif(!gutil.env.debug, minifyCss()))
 		.pipe(gulpif(gutil.env.csscomb, csscomb()))
 		.pipe(rename({suffix: '.min'}))
