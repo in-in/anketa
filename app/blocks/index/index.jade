@@ -4,6 +4,7 @@ include ../subtitle/subtitle
 include ../heading/heading
 include ../monospace/monospace
 include ../personal/personal
+include ../academy/academy
 include ../list/list
 include ../col/col
 include ../arrow/arrow
@@ -13,7 +14,16 @@ mixin index()
 	.index
 		+content()
 			+personal(getData('personalData'))
-			
+
+			+academy([
+				{
+					'link': 'https://htmlacademy.ru/',
+					'title': 'htmlacademy.ru',
+					'graduate': true
+				}
+			])
+
+
 			.index__group
 				+subtitle()
 					| ЧТО ВКЛЮЧЕНО

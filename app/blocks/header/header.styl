@@ -1,24 +1,22 @@
 .header
-	// background-color palegreen
 	clearfix()
 
 	&__logo
 		padding-top 60px
-		// background-color orange
 		float left
-		// +mobile()
-		// 	padding-top 10px
+		+below('m')
+			padding-top 10px
 
 	&__mark
 		padding-top 48px
 		padding-right 10px
-		// background-color coral
 		float right
-		// +mobile()
-		// 	padding-top 10px
+		+below('m')
+			padding-top 10px
 
 	&__title
 		width 100%
 		padding-top 31px
-		// background-color #CCC
 		float left
+		+below('m')
+			padding-top 40px

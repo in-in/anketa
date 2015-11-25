@@ -1,0 +1,37 @@
+mixin academy(items)
+	+b('section').academy
+		each i in items
+			+e.wrap
+				+heading().academy__title
+					| Выпускник &#32;
+					+e('a')(href="#{i.link}").link
+						= i.title
+				+e.radio
+					if i.graduate
+						input(
+							type='radio',
+							name='#{i.title}',
+							id='#{i.title}-yes',
+							checked=''
+							)
+						label(for='#{i.title}-yes') Да
+						input(
+							type='radio',
+							name='#{i.title}',
+							id='#{i.title}-no'
+							)
+						label(for='#{i.title}-no') Нет
+					else
+						input(
+							type='radio',
+							name='#{i.title}',
+							id='#{i.title}-yes'
+							)
+						label(for='#{i.title}-yes') Да
+						input(
+							type='radio',
+							name='#{i.title}',
+							id='#{i.title}-no',
+							checked=''
+							)
+						label(for='#{i.title}-no') Нет
