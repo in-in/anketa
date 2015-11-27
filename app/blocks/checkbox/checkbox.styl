@@ -1,0 +1,19 @@
+.checkbox
+	column-count 3
+
+.checkbox__item
+	color  #000000
+	font-size 21px
+	font-weight 700
+	line-height 25px
+	input[type='checkbox']
+		display none
+	label
+		cursor pointer
+		&::before
+			content ''
+			display inline-block
+			vertical-align middle
+			sprite $checkbox
+			input[type='checkbox']:checked + &
+				sprite $checkbox_check

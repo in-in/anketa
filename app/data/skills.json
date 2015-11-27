@@ -1,0 +1,20 @@
+[
+  ["Методология БЭМ", true],
+  ["jQuery", false ],
+  ["Использую GRUNT", true],
+  ["HAML", false ],
+  ["SASS", true ],
+  ["LESS", false ],
+  ["CoffeeScript", false ],
+  ["Jade", true ],
+  ["Stylus", true ],
+  ["Знаю (изучаю) Angular", false],
+  ["Верстка под Android", false],
+  ["Верстка под iOS", false],
+  ["Верстка под Windows Phone", false],
+  ["Верстка рассылок", false ],
+  ["Адаптивная верстка", true ],
+  ["Использую Dropbox", true],
+  ["Использую Gmail", true],
+  ["Использую GitHub", true ]
+]

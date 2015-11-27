@@ -6,6 +6,7 @@ include ../monospace/monospace
 include ../personal/personal
 include ../academy/academy
 include ../list/list
+include ../checkbox/checkbox
 include ../col/col
 include ../arrow/arrow
 include ../tree/tree
@@ -22,7 +23,12 @@ mixin index()
 					'graduate': true
 				}
 			])
-
+			.index__group
+				+heading()
+					| Практические навыки
+				+description()
+					| * Отемтьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+				+checkbox(getData('skills'))
 
 			.index__group
 				+subtitle()

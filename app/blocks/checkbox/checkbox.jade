@@ -1,0 +1,6 @@
+mixin checkbox(list)
+	ul.checkbox
+		each item, index in list
+			li.checkbox__item
+				input(type='checkbox', id='check_#{index}', checked= (item[1]) ? "" : null)
+				label(for='check_#{index}')= item[0]
