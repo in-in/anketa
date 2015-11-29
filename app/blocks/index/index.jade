@@ -14,15 +14,17 @@ include ../tree/tree
 mixin index()
 	.index
 		+content()
-			+personal(getData('personalData'))
+			.index__group
+				+personal(getData('personalData'))
 
-			+academy([
-				{
-					'link': 'https://htmlacademy.ru/',
-					'title': 'htmlacademy.ru',
-					'graduate': true
-				}
-			])
+			.index__group
+				+academy([
+					{
+						'link': 'https://htmlacademy.ru/',
+						'title': 'htmlacademy.ru',
+						'graduate': true
+					}
+				])
 			.index__group
 				+heading()
 					| Практические навыки

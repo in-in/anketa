@@ -1,40 +1,25 @@
 .checkbox
-	column-count 3
-	//overflow hidden
-	//display flex
-	//flex-direction column
-	//flex-wrap wrap
-	//height 250px
+	display flex
+	flex-direction column
+	flex-wrap wrap
+	height 260px
 
 .checkbox__item
-	//margin-bottom 9px
-	//height 32px
-	//padding-bottom 5px
-	//width 33%
-	color  #000000
-	font-size 21px
-	font-weight 700
-	background-color rgba(pink, .5)
-	//margin-bottom 6px
-	//line-height 25px
-	//outline 1px solid green
+	margin-bottom 10px
+	width 33%
 	input[type='checkbox']
 		display none
 	label
-		//display flex
-		//align-items center
-		//vertical-align bottom
+		display flex
+		align-items flex-end
+		color  #000000
+		font-size 21px
+		font-weight 700
 		cursor pointer
-		//vertical-align top
-		//outline 1px solid red
-		//line-height 27px
-		//padding-bottom 2px
 		&::before
 			content ''
 			display inline-block
 			margin-right 3px
-			//vertical-align bottom
-			//outline 1px solid black
 			sprite $checkbox
 	input[type='checkbox']:checked + label::before
 		sprite $checkbox_check
