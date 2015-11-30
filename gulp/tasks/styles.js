@@ -15,7 +15,8 @@ import paths from '../paths';
 gulp.task('styles', () => (
 	gulp.src('*.styl', {
 		cwd: 'app/styles',
-		nonull: true
+		nonull: true,
+		'include css': true
 	})
 		.pipe(plumber({errorHandler}))
 		.pipe(stylus({
@@ -26,7 +27,7 @@ gulp.task('styles', () => (
 			],
 			sourcemap: gutil.env.debug ? {
 				comment: false,
-				inline: true
+				inline: true,
 			} : false
 		}))
 		//.pipe(gulpif(!gutil.env.debug, cmq()))

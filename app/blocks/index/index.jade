@@ -7,6 +7,7 @@ include ../personal/personal
 include ../academy/academy
 include ../list/list
 include ../checkbox/checkbox
+include ../slider/slider
 include ../col/col
 include ../arrow/arrow
 include ../tree/tree
@@ -31,6 +32,13 @@ mixin index()
 				+description()
 					| Отемтьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
 				+checkbox(getData('skills'))
+
+			.index__group
+				+heading()
+					| Уровень владения JavaScript
+				+slider()
+				| foo
+
 
 			.index__group
 				+subtitle()
