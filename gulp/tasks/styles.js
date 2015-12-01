@@ -15,12 +15,12 @@ import paths from '../paths';
 gulp.task('styles', () => (
 	gulp.src('*.styl', {
 		cwd: 'app/styles',
-		nonull: true,
-		'include css': true
+		nonull: true
 	})
 		.pipe(plumber({errorHandler}))
 		.pipe(stylus({
 			errors: true,
+			'include css': true,
 			use: [
 				rupture(),
 				autoprefixer()
