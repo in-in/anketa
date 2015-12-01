@@ -10,33 +10,31 @@ $(() => {
 var slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
+	//orientation: 'vertical',
 	start: 1,
 	connect: false,
+	behaviour: "tap",
 	range: {
 		'min': 0,
+		'19.8': 1,
+		'49.4': 2,
 		'max': 3
 	},
 	step: 1,
 	pips: {
 		mode: 'values',
 		values: [0, 1, 2, 3],
-		density: 4
+		density: 4,
+		stepped: true
 	}
 });
 
-$('.noUi-value.noUi-value-horizontal.noUi-value-large').each(function(){
-	var val = $(this).html();
-	val = recountVal(parseInt(val));
-	$(this).html(val);
-});
-
-function recountVal(val){
-	switch(val){
-		case 0: return 'Не владею'; break;
-		case 1:return 'Использую готовые решения';break;
-		case 2:return 'Использую готовые решения и умею их переделывать';break;
-		case 3:return 'Пишу сложные скрипты';break;
-		//default :return '$10 M';break;
+var nodes = document.querySelectorAll('.noUi-value.noUi-value-horizontal.noUi-value-large');
+Array.prototype.forEach.call(nodes, function( el ){
+	switch(el.innerHTML) {
+		case '0': el.innerHTML = 'Не владею'; break;
+		case '1': el.innerHTML = 'Использую готовые решения'; break;
+		case '2': el.innerHTML = 'Использую готовые решения и умею их переделывать'; break;
+		case '3': el.innerHTML = 'Пишу сложные скрипты'; break;
 	}
-}
-
+});

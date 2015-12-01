@@ -1,0 +1,59 @@
+@import "../../../node_modules/nouislider/distribute/nouislider.min.css"
+
+.slider-wrap
+	width 100%
+	//height 300px
+	height 757px
+	padding-top 20px
+	//padding-left 6px
+	//padding-right 6px
+	//background-color lightblue
+
+#slider
+	//height 756px
+
+.noUi-target
+	height 2px
+	border none
+	border-radius 0
+	box-shadow none
+	background-color pips-color
+
+.noUi-horizontal .noUi-handle
+	background-color transparent
+	sprite $slider_pointer
+	background-repeat no-repeat
+	box-shadow none
+	border none
+	border-radius 0
+	cursor pointer
+	outline 1px solid red
+	&::before
+	&::after
+		display none
+
+.noUi-value
+	width 170px
+
+.noUi-value.noUi-value-horizontal.noUi-value-large
+	margin-left 0
+	padding-top 33px
+	color heading-color
+	font-size 13px
+	font-weight 700
+	line-height normal
+	text-align left
+	&:last-child
+		text-align right
+		left 78% !important
+
+.noUi-marker.noUi-marker-horizontal.noUi-marker-normal
+	display none
+
+.noUi-marker.noUi-marker-horizontal.noUi-marker-large
+	height 10px
+	//margin 0
+	background-color pips-color
+	&:first-child,
+	&:nth-last-child(2)
+		height 23px
