@@ -10,22 +10,20 @@ $(() => {
 var slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
-	//orientation: 'vertical',
 	start: 1,
 	connect: false,
-	behaviour: "tap",
+	snap: true,
 	range: {
 		'min': 0,
-		'19.8': 1,
-		'49.4': 2,
+		'19.8%': 1,
+		'49.4%': 2,
 		'max': 3
 	},
 	step: 1,
 	pips: {
 		mode: 'values',
 		values: [0, 1, 2, 3],
-		density: 4,
-		stepped: true
+		density: 4
 	}
 });
 
