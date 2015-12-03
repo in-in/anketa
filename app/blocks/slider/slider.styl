@@ -2,15 +2,14 @@
 
 .slider-wrap
 	width 100%
-	//height 300px
 	height 757px
-	padding-top 20px
-	//padding-left 6px
-	//padding-right 6px
-	//background-color lightblue
+	padding-top 45px
+	padding-left 6px
+	padding-right 6px
 
 #slider
 	//height 756px
+
 
 .noUi-target
 	height 2px
@@ -23,7 +22,8 @@
 	background-color transparent
 	sprite $slider_pointer
 	top -18px
-	left -8.5px
+	//left -8.5px
+	left -8px
 	background-repeat no-repeat
 	box-shadow none
 	border none
@@ -32,6 +32,9 @@
 	&::before
 	&::after
 		display none
+
+.noUi-pips.noUi-pips-horizontal
+	padding-top 0
 
 .noUi-value
 	width 170px
@@ -44,6 +47,10 @@
 	font-weight 700
 	line-height normal
 	text-align left
+	cursor pointer
+	transition text-shadow .2s ease
+	&:active
+		text-shadow 0 0 2px white
 	&:last-child
 		text-align right
 		left 78% !important
@@ -53,8 +60,8 @@
 
 .noUi-marker.noUi-marker-horizontal.noUi-marker-large
 	height 10px
-	//margin 0
 	background-color pips-color
 	&:first-child,
 	&:nth-last-child(2)
-		height 23px
+		height 25px
+		margin-top -2px

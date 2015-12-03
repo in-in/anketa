@@ -13,12 +13,12 @@ include ../arrow/arrow
 include ../tree/tree
 
 mixin index()
-	.index
+	+b.index
 		+content()
-			.index__group
+			+e.group
 				+personal(getData('personalData'))
 
-			.index__group
+			+e.group
 				+academy([
 					{
 						'link': 'https://htmlacademy.ru/',
@@ -26,20 +26,20 @@ mixin index()
 						'graduate': true
 					}
 				])
-			.index__group
+			+e.group
 				+heading()
 					| Практические навыки
 				+description()
 					| Отемтьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
 				+checkbox(getData('skills'))
 
-			.index__group
+			+e.slider
 				+heading()
 					| Уровень владения JavaScript
 				+slider()
 
 
-			.index__group
+			+e.group
 				+subtitle()
 					| ЧТО ВКЛЮЧЕНО
 
