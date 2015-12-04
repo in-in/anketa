@@ -2,14 +2,21 @@
 
 .slider-wrap
 	width 100%
-	height 757px
+	height 400px
 	padding-top 45px
 	padding-left 6px
 	padding-right 6px
 
 #slider
-	//height 756px
+	+below('m')
+		display none
 
+#slider-vert
+	display none
+	width 2px
+	height 300px
+	+below('m')
+		display block
 
 .noUi-target
 	height 2px
@@ -19,10 +26,10 @@
 	background-color pips-color
 
 .noUi-horizontal .noUi-handle
+.noUi-vertical .noUi-handle
 	background-color transparent
 	sprite $slider_pointer
 	top -18px
-	//left -8.5px
 	left -8px
 	background-repeat no-repeat
 	box-shadow none
