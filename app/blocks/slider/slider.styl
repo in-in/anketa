@@ -2,10 +2,11 @@
 
 .slider-wrap
 	width 100%
-	height 500px
 	padding-top 45px
 	padding-left 6px
 	padding-right 6px
+	+below('m')
+		padding-left 35px
 
 #slider
 	+below('m')
@@ -22,9 +23,6 @@
 .noUi-horizontal .noUi-handle
 .noUi-vertical .noUi-handle
 	background-color transparent
-	sprite $slider_pointer
-	top -18px
-	left -8px
 	background-repeat no-repeat
 	box-shadow none
 	border none
@@ -34,29 +32,51 @@
 	&::after
 		display none
 
+.noUi-horizontal .noUi-handle
+	top -18px
+	left -9px
+	sprite $slider_pointer
+
+.noUi-vertical .noUi-handle
+	top -8px
+	left -19px
+	sprite $slider_pointer_90
+
 .noUi-pips.noUi-pips-horizontal
 	padding-top 0
 
-.noUi-value
-	width 170px
+.noUi-pips.noUi-pips-vertical
+	padding 0 0
+	margin-left -2px
 
 .noUi-value.noUi-value-horizontal.noUi-value-large
-	margin-left 0
-	padding-top 33px
-	color heading-color
+.noUi-value.noUi-value-vertical.noUi-value-large
 	font-size 13px
 	font-weight 700
 	line-height normal
+	color heading-color
 	text-align left
 	cursor pointer
 	transition text-shadow .2s ease
 	&:active
 		text-shadow 0 0 2px white
+
+.noUi-value.noUi-value-horizontal.noUi-value-large
+	width 170px
+	margin-left 0
+	padding-top 33px
+	+below('l')
+		width 150px
 	&:last-child
 		text-align right
 		left 78% !important
 
-.noUi-marker.noUi-marker-horizontal.noUi-marker-normal
+.noUi-value.noUi-value-vertical.noUi-value-large
+	width 300px
+	padding-left 10px
+
+.noUi-marker.noUi-marker-horizontal.noUi-marker-normal,
+.noUi-marker.noUi-marker-vertical.noUi-marker-normal
 	display none
 
 .noUi-marker.noUi-marker-horizontal.noUi-marker-large
@@ -66,3 +86,6 @@
 	&:nth-last-child(2)
 		height 25px
 		margin-top -2px
+
+.noUi-marker.noUi-marker-vertical.noUi-marker-large
+	background-color pips-color

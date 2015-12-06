@@ -26,7 +26,7 @@ const rangeConfigVert = {
 	max: 3
 };
 
-if (window.innerWidth >= 640) {
+if (window.innerWidth >= 641) {
 	sliderConfig.orientation = 'horizontal';
 	sliderConfig.range = rangeConfigHoriz;
 } else {
@@ -38,7 +38,7 @@ const slider = document.getElementById('slider');
 
 noUiSlider.create(slider, sliderConfig);
 
-renameLabel((window.innerWidth >= 640) ? 'horizontal' : 'vertical');
+renameLabel((window.innerWidth >= 641) ? 'horizontal' : 'vertical');
 
 function renameLabel(position) {
 	const nodes = document.querySelectorAll(`.noUi-value.noUi-value-${position}.noUi-value-large`);
@@ -74,7 +74,7 @@ function renameLabel(position) {
 }
 
 window.addEventListener('resize', function () {
-	if (window.innerWidth >= 640) {
+	if (window.innerWidth >= 641) {
 		slider.noUiSlider.destroy();
 		sliderConfig.orientation = 'horizontal';
 		sliderConfig.range = rangeConfigHoriz;
