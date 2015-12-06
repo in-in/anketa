@@ -1,6 +1,6 @@
 import noUiSlider from 'nouislider';
 
-let sliderConfig = {
+const sliderConfig = {
 	start: 1,
 	connect: false,
 	snap: true,
@@ -27,15 +27,11 @@ const rangeConfigVert = {
 };
 
 if (window.innerWidth >= 640) {
-	sliderConfig = {
-		orientation: 'horizontal',
-		range: rangeConfigHoriz
-	};
+	sliderConfig.orientation = 'horizontal';
+	sliderConfig.range = rangeConfigHoriz;
 } else {
-	sliderConfig = {
-		orientation: 'vertical',
-		range: rangeConfigVert
-	};
+	sliderConfig.orientation = 'vertical';
+	sliderConfig.range = rangeConfigVert;
 }
 
 const slider = document.getElementById('slider');
