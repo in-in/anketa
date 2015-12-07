@@ -3,7 +3,7 @@ include ../container/container
 include ../subtitle/subtitle
 include ../heading/heading
 include ../monospace/monospace
-include ../personal/personal
+include ../underscore/underscore
 include ../academy/academy
 include ../list/list
 include ../checkbox/checkbox
@@ -16,7 +16,7 @@ mixin index()
 	+b.index
 		+content()
 			+e.group
-				+personal(getData('personalData'))
+				+underscoreRow(getData('personalData'))
 
 			+e.group
 				+academy([
@@ -37,33 +37,5 @@ mixin index()
 				+heading()
 					| Уровень владения JavaScript
 				+slider()
-
-
 			+e.group
-				+subtitle()
-					| ЧТО ВКЛЮЧЕНО
-
-			+heading()
-				| Инструменты:
-
-			.index__group
-				+list(getData('tools'))
-
-			.index__group
-				+subtitle()
-					| СТРУКТУРА ФАЙЛОВ
-
-				+col()
-					+heading()
-						| Исходники
-					+tree(getData('sourceTree'))
-
-				+col()
-					.index__arrow
-						+arrow()
-							| Компиляция
-
-				+col()
-					+heading()
-						| Готовые файлы
-					+tree(getData('buildTree'))
+				+underscoreRow([['Дата заполенения', '01.01.2014']])(class='underscore__data--short')

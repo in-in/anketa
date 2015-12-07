@@ -1,0 +1,9 @@
+mixin underscoreRow(items)
+	each i in items
+		+b.underscore
+			+e.title
+				+heading()
+					= i[0]
+			+e.data&attributes(attributes)
+				+monospace()
+					= i[1]

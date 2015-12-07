@@ -1,0 +1,24 @@
+.underscore
+	display flex
+	align-items flex-end
+	margin-bottom 23px
+	+below('m')
+		display block
+
+.underscore__title
+	margin-right 1rem
+	white-space nowrap
+	+below('m')
+		margin-bottom 1.3rem
+
+.underscore__data
+	flex-grow 1
+	padding-left 1rem
+	padding-bottom 5px
+	border-bottom 2px solid monospace-color
+
+.underscore__data--short
+	flex-grow 0
+	padding-right 1rem
+	+below('m')
+		display inline-block
