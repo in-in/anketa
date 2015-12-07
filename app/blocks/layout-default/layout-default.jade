@@ -2,7 +2,6 @@
 
 include ../../../node_modules/bemto.jade/bemto.jade
 include ../header/header
-include ../main/main
 include ../footer/footer
 include ../scripts/scripts
 
@@ -13,9 +12,8 @@ html(lang='ru')
 	include ../head/head
 	body
 		+container
-			+main()
-				+header()
-				block content
-				+footer()
+			+header()
+			block content
+			+footer()
 
 		+scripts()
